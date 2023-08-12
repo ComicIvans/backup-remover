@@ -10,8 +10,8 @@ def main():
     MINIO_CONFIG["MINIO_URL"],
     access_key=MINIO_CONFIG["MINIO_ACCESS_KEY"],
     secret_key=MINIO_CONFIG["MINIO_SECRET_KEY"],
-    secure=True,
-    region="es",
+    secure=MINIO_CONFIG["MINIO_SECURE"],
+    region=MINIO_CONFIG["MINIO_REGION"],
   )
 
   # Get all objects in the bucket.
