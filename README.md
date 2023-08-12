@@ -13,7 +13,7 @@ MINIO_URL="localhost:9000"
 MINIO_ACCESS_KEY="your_access_key"
 MINIO_SECRET_KEY="your_secret_key"
 MINIO_BUCKET="bucket-name"
-MINIO_SECURE=False
+MINIO_SECURE="False"
 MINIO_REGION="es"
 ```
 6. Ejecutar `python3 main.py`.

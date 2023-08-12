@@ -10,7 +10,7 @@ def main():
     MINIO_CONFIG["MINIO_URL"],
     access_key=MINIO_CONFIG["MINIO_ACCESS_KEY"],
     secret_key=MINIO_CONFIG["MINIO_SECRET_KEY"],
-    secure=MINIO_CONFIG["MINIO_SECURE"],
+    secure=MINIO_CONFIG["MINIO_SECURE"] == "True",
     region=MINIO_CONFIG["MINIO_REGION"],
   )
 
