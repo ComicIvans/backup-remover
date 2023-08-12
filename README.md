@@ -5,7 +5,7 @@
 Para probarlo:
 1. Clonar repositorio.
 2. Crear un entorno virtual de Python con `python3 -m venv .env`.
-3. Cambiar al entorno virtual (desde Visual Studio `Ctrl + Shift + P` y seleccionar intérprete).
+3. Cambiar al entorno virtual desde Visual Studio con `Ctrl + Shift + P` y seleccionar intérprete o desde la terminal con `source .env/bin/activate`.
 4. Instalar los paquetes necesarios `pip3 install minio` y `pip3 install python-dotenv`.
 5. Crear el archivo `minio.env` con:
 ```dotenv

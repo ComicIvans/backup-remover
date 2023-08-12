@@ -1,6 +1,12 @@
 from minio import Minio
 from datetime import datetime, timedelta, time
 from dotenv import dotenv_values
+import logging
+
+logging.basicConfig(
+  format='%(asctime)s %(levelname)-4s - %(message)s',
+  level=logging.INFO,
+  datefmt='%Y-%m-%d %H:%M:%S')
 
 MINIO_CONFIG = dotenv_values("minio.env")
 
@@ -54,7 +60,7 @@ def main():
     if date >= one_week_ago:
       for i, backup in enumerate(backups_by_date.get(date)):
         if i != 0:
-          print(f"Deleting {backup.object_name}...")
+          logging.info(f"Deleting {backup.object_name}...")
           #client.remove_object(MINIO_CONFIG["MINIO_BUCKET"], backup.object_name)
       continue
 
@@ -63,7 +69,7 @@ def main():
       if date.weekday() != 6:
         for i, backup in enumerate(backups_by_date.get(date)):
           if i != 0:
-            print(f"Deleting {backup.object_name}...")
+            logging.info(f"Deleting {backup.object_name}...")
             #client.remove_object(MINIO_CONFIG["MINIO_BUCKET"], backup.object_name)
       continue
 
@@ -72,7 +78,7 @@ def main():
       if date.day != 1:
         for i, backup in enumerate(backups_by_date.get(date)):
           if i != 0:
-            print(f"Deleting {backup.object_name}...")
+            logging.info(f"Deleting {backup.object_name}...")
             #client.remove_object(MINIO_CONFIG["MINIO_BUCKET"], backup.object_name)
       continue
 
@@ -81,7 +87,7 @@ def main():
       if date.month % 2 != 0:
         for i, backup in enumerate(backups_by_date.get(date)):
           if i != 0:
-            print(f"Deleting {backup.object_name}...")
+            logging.info(f"Deleting {backup.object_name}...")
             #client.remove_object(MINIO_CONFIG["MINIO_BUCKET"], backup.object_name)
       continue
 
@@ -90,7 +96,7 @@ def main():
       if date.month != 1:
         for i, backup in enumerate(backups_by_date.get(date)):
           if i != 0:
-            print(f"Deleting {backup.object_name}...")
+            logging.info(f"Deleting {backup.object_name}...")
             #client.remove_object(MINIO_CONFIG["MINIO_BUCKET"], backup.object_name)
       continue
 
