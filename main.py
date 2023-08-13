@@ -8,7 +8,7 @@ logging.basicConfig(
   level=logging.INFO,
   datefmt='%Y-%m-%d %H:%M:%S')
 
-MINIO_CONFIG = dotenv_values("minio.env")
+MINIO_CONFIG = dotenv_values("~/backup-remover/minio.env")
 
 def main():
   # Create the MinIO client.
