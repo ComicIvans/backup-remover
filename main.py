@@ -61,7 +61,7 @@ def main():
       for i, backup in enumerate(backups_by_date.get(date)):
         if i != 0:
           logging.info(f"Deleting {backup.object_name}...")
-          #client.remove_object(MINIO_CONFIG["MINIO_BUCKET"], backup.object_name)
+          client.remove_object(MINIO_CONFIG["MINIO_BUCKET"], backup.object_name)
       continue
 
     # Keep only one backup per week from one week ago to one month ago.
