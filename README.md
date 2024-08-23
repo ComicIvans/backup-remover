@@ -20,3 +20,4 @@ MINIO_REGION: es
 ```
 
 1. Ejecutar `python3 main.py`.
+2. Disfrutar
